@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Layout from "./components/Layout/Layout";
+import About from "./pages/About/About";
+import Dashboard from "./pages/Dashboard/Dashboadrd";
+import NoMatch from "./pages/NoMatch/NoMatch";
+import Posts from "./pages/Posts/Posts";
+import Post from "./pages/Post/Post";
+import './styles/global.scss';
+import EditPost from "./pages/EditPost/EditPost";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="posts" element={<Posts />} />
+            <Route path="posts/:id" element={<Post />} />
+            <Route path="posts/:id/edit" element={<EditPost />} />
+            <Route path="*" element={<NoMatch />} />
+          </Route>
+        </Routes>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,31 @@
+@import './null.scss';
+@import './fonts.scss';
+@import './variables.scss';
+@import './mixins';
+
+* {
+   transition: 0.3s all ease 0s;
+}
+html, body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+	color: var(--text-color);
+  z-index: 5;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   background-color: var(--bg-color);
+
+}
+.container {
+   position: relative;
+   max-width: 1170px;
+   margin: 0 auto;
+   padding: 0px 15px;
+   box-sizing: content-box;
+   z-index: 50;
+}

@@ -1,0 +1,35 @@
+.editPost {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   &__body {
+      font-size: 1rem;
+   }
+   &__button {
+      display: inline-block;
+      font-size: 1.125rem;
+      margin-top: 50px;
+      padding: 20px 50px;
+      border: 1px solid lightblue;
+      &:hover {
+         background-color: lightblue;
+      }
+   }
+   &__link {
+      background-color: inherit;
+      font-size: 1rem;
+      margin: 20px 0px;
+      position: relative;
+      left: 24px;
+      &::before {
+         content: "←";
+         position: absolute;
+         top: -3px;
+         left: -24px;
+         font-size: 1.125rem;
+      }
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

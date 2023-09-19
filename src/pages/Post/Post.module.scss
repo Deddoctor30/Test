@@ -1,0 +1,43 @@
+.post {
+   padding: 20px;
+   margin-top: 20px;
+   margin-bottom: 30px;
+   &__title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+   }
+   &__body {
+      font-size: 1rem;
+      font-style: italic;
+   }
+   &__button {
+      display: block;
+      margin-top: 50px;
+      text-align: center;
+      &>*{
+         font-size: 1.125rem;
+         padding: 20px 50px;
+         border: 1px solid lightblue;
+         &:hover {
+            background-color: lightblue;
+         }
+      }
+   }
+   &__link {
+      background-color: inherit;
+      font-size: 1rem;
+      margin: 20px 0px;
+      position: relative;
+      left: 24px;
+      &::before {
+         content: "←";
+         position: absolute;
+         top: -3px;
+         left: -24px;
+         font-size: 1.125rem;
+      }
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

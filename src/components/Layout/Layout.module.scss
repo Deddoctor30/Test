@@ -1,0 +1,30 @@
+
+.nav {
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 30px;
+   font-size: 1.125rem;
+   &__items {
+      display: flex;
+      gap: 30px;
+   }
+   &__item {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+   &__pending {
+      color: lightcoral;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+   &__active {
+      color: lightskyblue;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
