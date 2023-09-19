@@ -39,7 +39,7 @@ const Posts = () => {
           ))}
       </div>
       <button className={styles.posts__button} onClick={() => fetchPosts()}>
-        Загрузить посты
+        Загрузить посты., данны емне
       </button>
     </div>
   );
