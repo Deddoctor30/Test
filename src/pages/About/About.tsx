@@ -6,6 +6,8 @@ export default function About() {
        <h2>About</h2>
        <h2>About123</h2>
        <h2>About123</h2>
+       <h2>About</h2>
+       <h2>About</h2>
      </div>
    );
  }

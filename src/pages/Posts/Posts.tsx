@@ -5,12 +5,12 @@ import { useActions } from "../../hooks/useActions";
 import { useEffect, useState } from "react";
 import { TPost } from "../../types/post";
 import { useDispatch } from "react-redux";
-import { fetchAllPosts } from "../../store/asyncActions/posts";
+import { fetchAllPosts } from "../../store/action-creators/posts";
 import { Dispatch } from "redux";
 
 const Posts = () => {
   const { fetchAllPosts } = useActions();
-  const data = useTypedSelector((state) => state.posts.data);
+  const data: TPost[] = useTypedSelector((state) => state.posts.data);
   const isLoading = useTypedSelector((state) => state.posts.loading);
   const [posts, setPosts] = useState<TPost[]>([]);
 
@@ -21,7 +21,6 @@ const Posts = () => {
   const fetchPosts = () => {
     fetchAllPosts();
   };
-  console.log(posts);
 
   return (
     <div className={styles.posts}>

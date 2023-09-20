@@ -21,7 +21,7 @@ interface FetchAlbumbError {
 export type AlbumbAction = FetchAlbumb | FetchAlbumbSuccess | FetchAlbumbError
 
 export interface AlbumsState {
-   data: any[]
+   data: Albums[]
    loading: boolean
    error: null | string
  }

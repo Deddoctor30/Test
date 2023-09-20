@@ -21,7 +21,7 @@ interface FetchPostsError {
 export type PostAction = FetchPosts | FetchPostsSuccess | FetchPostsError
 
 export interface PostState {
-  data: any[]
+  data: TPost[]
   loading: boolean
   error: null | string
 }
